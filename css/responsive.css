@@ -1,0 +1,281 @@
+/* ============================================
+   CSS RESPONSIVO - Mobile First
+   ============================================ */
+
+/* Telas pequenas (mobile) */
+@media (max-width: 768px) {
+    :root {
+        --spacing-xl: 2.5rem;
+        --spacing-lg: 2rem;
+        --spacing-md: 1.5rem;
+    }
+    
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.7rem;
+    }
+    
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* Header */
+    .main-nav, .header-cta .phone-link {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: flex;
+    }
+    
+    .header-cta .cta-button {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+        display: none;
+    }
+    
+    .logo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .logo img {
+        height: 50px;
+    }
+    
+    .oab-badge {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.6rem;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+        padding: 6rem 0 3rem;
+        margin-top: 70px;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    /* Seção de Cards */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .service-card {
+        padding: var(--spacing-md);
+    }
+    
+    /* Seção Sobre */
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .credentials {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        align-items: flex-start;
+    }
+    
+    .credential-item {
+        flex-direction: row;
+        align-items: center;
+        gap: var(--spacing-sm);
+    }
+    
+    .credential-number {
+        font-size: 1.7rem;
+    }
+    
+    .about-image {
+        height: 300px;
+        order: -1;
+    }
+    
+    /* FAQ */
+    .faq-question {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: 1rem;
+    }
+    
+    .faq-answer {
+        padding: 0 var(--spacing-md);
+    }
+    
+    .faq-item.active .faq-answer {
+        padding: 0 var(--spacing-md) var(--spacing-sm);
+    }
+    
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .footer-links-section {
+        order: 2;
+    }
+    
+    .footer-contact-section {
+        order: 1;
+    }
+    
+    .footer-logo-section {
+        order: 0;
+    }
+    
+    /* Modal */
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+    
+    .modal-container {
+        max-height: 85vh;
+    }
+    
+    /* Utilitários responsivos */
+    .hide-mobile {
+        display: none !important;
+    }
+}
+
+/* Telas médias (tablet) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .about-content {
+        gap: var(--spacing-lg);
+    }
+    
+    .credentials {
+        flex-wrap: wrap;
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Telas grandes (desktop) */
+@media (min-width: 1025px) {
+    .mobile-menu-btn,
+    .mobile-menu {
+        display: none;
+    }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .primary-cta {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .final-cta-title {
+        font-size: 1.7rem;
+    }
+    
+    .large-cta {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+    
+    .modal-header,
+    .modal-content {
+        padding: var(--spacing-md);
+    }
+}
+
+/* Ajustes de altura para dispositivos móveis na orientação paisagem */
+@media (max-height: 600px) and (orientation: landscape) {
+    .hero-section {
+        padding: 5rem 0 2rem;
+        min-height: auto;
+    }
+    
+    .modal-container {
+        max-height: 80vh;
+    }
+}
+
+/* Impressão */
+@media print {
+    .main-header,
+    .hero-cta,
+    .services-cta,
+    .final-cta-section,
+    .main-footer,
+    .cta-button {
+        display: none !important;
+    }
+    
+    body {
+        color: #000;
+        background: #fff;
+    }
+    
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    .hero-section,
+    .services-section,
+    .about-section,
+    .faq-section {
+        padding: 1rem 0;
+        background: none;
+    }
+    
+    .service-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+    
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+    
+    .faq-answer {
+        max-height: none !important;
+        display: block !important;
+    }
+}

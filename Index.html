@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dr. Luiz Guilherme Ramos do Couto - Especialista em Direito da Saúde. Atuamos em recusas de cobertura por planos, abusos contratuais e garantia de acesso a tratamentos especializados.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="shortcut icon" href="images/ico.ico">
+
+    <title>Dr. Luiz Guilherme Ramos do Couto - Defesa Jurídica Especializada em Planos de Saúde</title>
+    
+    <!-- Google Fonts (Serif para títulos, Sans-serif para textos) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Ícone da página -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- CSS interno para variáveis e estilos base -->
+    <style>
+        :root {
+            /* NOVA PALETA DE CORES para Dr. Luiz Guilherme Ramos do Couto */
+            --primary-dark: #385f32; /* Verde principal */
+            --primary-blue: #385f32; 
+            --secondary-blue: #385f32;
+            --accent-blue: #f6cc73; /* Dourado/amarelo como cor de destaque */
+            --light-blue: #f0f7ed; /* Verde muito claro para fundos */
+            --white: #FFFFFF;
+            --gray-light: #F5F7FA;
+            --gray-medium: #6B7280;
+            --gray-dark: #374151;
+            
+            /* Tipografia */
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Inter', sans-serif;
+            
+            /* Espaçamentos */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 3rem;
+            --spacing-xl: 4rem;
+            
+            /* Bordas */
+            --border-radius: 8px;
+            --border-radius-lg: 12px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-sans);
+            color: var(--gray-dark);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header e Navegação -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <!-- LOGO: Inserir imagem real aqui -->
+                <div class="logo">
+                    <img src="images/logo-2.png" alt="Logo do Escritório do Dr. Luiz Guilherme Ramos do Couto" width="180" height="60">
+                    <!--<span class="oab-badge">OAB/MG 233.183</span>-->
+                </div>
+                
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#services">Atuação</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="https://api.whatsapp.com/send/?phone=5531984828479&text=Ol%C3%A1%2C+tenho+uma+d%C3%BAvida&type=phone_number&app_absent=0">Contato</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-cta">
+                    <a href="https://api.whatsapp.com/send/?phone=5531984828479&text=Ol%C3%A1%2C+tenho+uma+d%C3%BAvida&type=phone_number&app_absent=0" class="phone-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 15.5C18.75 15.5 17.55 15.3 16.43 14.93C16.08 14.82 15.69 14.9 15.41 15.17L13.21 17.37C10.38 15.93 8.06 13.62 6.62 10.79L8.82 8.59C9.1 8.31 9.18 7.92 9.07 7.57C8.7 6.45 8.5 5.25 8.5 4C8.5 3.45 8.05 3 7.5 3H4C3.45 3 3 3.45 3 4C3 13.39 10.61 21 20 21C20.55 21 21 20.55 21 20V16.5C21 15.95 20.55 15.5 20 15.5Z" fill="currentColor"/>
+                        </svg>
+                        (31) 98482-8479
+                    </a>
+                    <button class="cta-button" id="header-cta-button"><a href="https://api.whatsapp.com/send/?phone=5531984828479&text=Ol%C3%A1%2C+tenho+uma+d%C3%BAvida&type=phone_number&app_absent=0" target="_blank">Agendar Consulta</a></button>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu móvel (offcanvas) -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <!-- LOGO: Inserir imagem real aqui -->
+                <img src="images/logo.png" alt="Logo do Escritório do Dr. Luiz Guilherme Ramos do Couto" width="150" height="50">
+            </div>
+            <button class="close-menu-btn" id="close-menu-btn" aria-label="Fechar menu">×</button>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#services">Atuação</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#faq">Perguntas Frequentes</a></li>
+                <li><a href="https://api.whatsapp.com/send/?phone=5531984828479&text=Ol%C3%A1%2C+tenho+uma+d%C3%BAvida&type=phone_number&app_absent=0">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-contact">
+            <a href="tel:31984828479" class="phone-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 15.5C18.75 15.5 17.55 15.3 16.43 14.93C16.08 14.82 15.69 14.9 15.41 15.17L13.21 17.37C10.38 15.93 8.06 13.62 6.62 10.79L8.82 8.59C9.1 8.31 9.18 7.92 9.07 7.57C8.7 6.45 8.5 5.25 8.5 4C8.5 3.45 8.05 3 7.5 3H4C3.45 3 3 3.45 3 4C3 13.39 10.61 21 20 21C20.55 21 21 20.55 21 20V16.5C21 15.95 20.55 15.5 20 15.5Z" fill="currentColor"/>
+                </svg>
+                (31) 98482-8479
+            </a>
+            <button class="cta-button"><a href="https://api.whatsapp.com/send/?phone=5531984828479&text=Ol%C3%A1%2C+tenho+uma+d%C3%BAvida&type=phone_number&app_absent=0" target="_blank">Agendar Consulta</a></button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <!-- HERO BACKGROUND: Inserir imagem real aqui -->
+        <div class="hero-background" style="background-image: url('images/pexels-cottonbro-7579827.jpg');"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <!-- FRASE DE DESTAQUE OBRIGATÓRIA -->
+                    <span class="highlight-question">Seu plano de saúde recusou um procedimento médico essencial em Belo Horizonte?</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Conte com assessoria jurídica especializada em Minas Gerais para garantir o seu acesso à saúde. Realizamos avaliações técnicas sobre recusas de cobertura, tratamentos, exames, internações e questões envolvendo seu plano.
+                </p>
+                <div class="hero-cta">
+                    <button class="cta-button primary-cta" id="hero-cta-button"><a href="https://api.whatsapp.com/send/?phone=5531984828479&text=Ol%C3%A1%2C+tenho+uma+d%C3%BAvida&type=phone_number&app_absent=0" target="_blank">Obter uma avaliação do meu caso</i></a></button>
+                    <a href="#services" class="secondary-link">Veja nossas principais áreas de atuação</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Cards (Áreas de Atuação) -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Garanta Seu Acesso à Saúde com Assessoria Jurídica Especializada em MG</h2>
+                <p class="section-subtitle">Busque orientação jurídica quando se deparar com as seguintes situações:</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Card 4: Cirurgias Negadas -->
+                <div class="service-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-hospital" alt="Ícone de cirurgia"></i>
+                    </div>
+                    <h3 class="card-title">Recusa de Cirurgias e Exames</h3>
+                    <p class="card-description">
+                        Atuamos juridicamente contra a negativa injustificada de procedimentos cirúrgicos ou exames diagnósticos necessários, analisando cada situação e as estratégias legais aplicáveis em Minas Gerais.
+                    </p>
+                </div>
+                
+                <!-- Card 2: Medicamentos de Alto Custo -->
+                <div class="service-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-pills" alt="Ícone de medicamentos"></i>
+                    </div>
+                    <h3 class="card-title">Fornecimento de Medicamentos Especializados</h3>
+                    <p class="card-description">
+                        Oferecemos suporte jurídico quando há recusa no fornecimento de medicamentos prescritos, incluindo aqueles que não estão listados no rol da ANS, buscando garantir o tratamento necessário.
+                    </p>
+                </div>
+                
+                <!-- Card 5: Home Care Negado -->
+                <div class="service-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-house-medical"></i>
+                    </div>
+                    <h3 class="card-title">Atendimento Domiciliar (Home Care) Recusado</h3>
+                    <p class="card-description">
+                        Prestamos consultoria jurídica nos casos em que o plano se nega a autorizar o cuidado domiciliar, mesmo quando há recomendação médica e suporte técnico que justifiquem a necessidade.
+                    </p>
+                </div>
+                
+                <!-- Card 1: Reajuste Abusivo -->
+                <div class="service-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-money-bill-trend-up" alt="Ícone de reajuste abusivo"></i>
+                    </div>
+                    <h3 class="card-title">Aumentos Abusivos na Mensalidade</h3>
+                    <p class="card-description">
+                        Atuamos na análise e contestação judicial de reajustes de preços considerados excessivos ou desproporcionais, com base na legislação consumerista e nas regras estabelecidas pela ANS.
+                    </p>
+                </div>
+                
+                <!-- Card 3: Isenção de IR -->
+                <div class="service-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-file-invoice-dollar" alt="Ícone de isenção fiscal"></i>
+                    </div>
+                    <h3 class="card-title">Direito à Isenção do Imposto de Renda</h3>
+                    <p class="card-description">
+                        Prestamos assessoria para verificação e requerimento do direito à isenção do IR para portadores de doenças graves, conforme previsto na legislação tributária.
+                    </p>
+                </div>
+
+                <!-- Card 6: Tratamentos Fora do Rol da ANS -->
+                <div class="service-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-clipboard-check"></i>
+                    </div>
+                    <h3 class="card-title">Cobertura para Tratamentos Não Previstos</h3>
+                    <p class="card-description">
+                        Avaliamos a viabilidade jurídica de exigir cobertura para tratamentos prescritos que o plano recusa com base na ausência no rol da ANS, explorando os argumentos legais para o seu caso.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="services-cta">
+                <p class="cta-text">Não aceite uma negativa do seu plano sem antes conversar com um especialista. Seus direitos podem estar sendo violados.</p>
+                <button class="cta-button">
+                    <a href="https://api.whatsapp.com/send/?phone=5531984828479&text=Ol%C3%A1%2C+tenho+uma+d%C3%BAvida&type=phone_number&app_absent=0" target="_blank">
+                        Conversar com um Especialista
+                    </a>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!--Section de destaque-->
+
+    <section class="destaque-section">
+    <div class="containerDestaque">
+        <div class="destaque-content">
+            <p class="destaque-texto">Se você está precisando de um Escritório de advocacia com um ótimo histórico de soluções em diversas áreas.</p>
+            
+            <div class="destaque-numeros">
+                <div class="numero-item">
+                    <span class="numero">+10</span>
+                    <p class="numero-label">Anos de Experiência</p>
+                </div>
+                
+                <div class="numero-item">
+                    <span class="numero">+6.000</span>
+                    <p class="numero-label">Casos resolvidos</p>
+                </div>
+            </div>
+            
+            <a href="https://api.whatsapp.com/send?phone=554899899535&text=Ol%C3%A1%2C%20vim%20pelo%20site!" class="whatsapp-btn" target="_blank">
+                <i class="fab fa-whatsapp"></i>Conversar por WhatsApp
+            </a>
+        </div>
+
+        <div class="imgDestaque">
+            <img src="images/sobre-o-advogado.jpeg" alt="">
+        </div>
+    </div>
+    </section> 
+    
+    <script>
+        // Adicione este script no final do body ou em um arquivo .js separado
+        document.addEventListener('DOMContentLoaded', function() {
+            function animateValue(element, start, end, duration) {
+                let startTimestamp = null;
+                const step = (timestamp) => {
+                    if (!startTimestamp) startTimestamp = timestamp;
+                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                    const value = Math.floor(progress * (end - start) + start);
+                    
+                    // Formatação com '+' e separador de milhar
+                    element.textContent = '+' + value.toLocaleString('pt-BR');
+                    
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    }
+                };
+                window.requestAnimationFrame(step);
+            }
+
+            function handleIntersection(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const numeroItems = entry.target.querySelectorAll('.numero');
+                        
+                        // Anima o primeiro número (+10)
+                        animateValue(numeroItems[0], 0, 10, 1500);
+                        
+                        // Anima o segundo número (+6.000) - mais lento
+                        animateValue(numeroItems[1], 0, 6000, 2000);
+                        
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }
+
+            // Configura o Intersection Observer
+            const observer = new IntersectionObserver(handleIntersection, {
+                threshold: 0.5 // Dispara quando 50% da seção estiver visível
+            });
+
+            // Observa a section de destaque
+            const destaqueSection = document.querySelector('.destaque-section');
+            if (destaqueSection) {
+                observer.observe(destaqueSection);
+            }
+        });
+    </script>
+    
+    <!-- Seção Sobre -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Conheça o Advogado</h2>
+
+                    <p class="about-description">
+                        <strong>Dr. Luiz Guilherme Ramos do Couto</strong><br>
+                        Advogado com inscrição ativa na OAB/MG sob o nº 233.183
+                    </p>
+
+                    <p class="about-description">
+                        Sua atuação profissional concentra-se nas áreas de Direito Civil e Consumerista, com ênfase em saúde suplementar. Desenvolve um trabalho jurídico dedicado à análise de casos, orientação para prevenção de conflitos e avaliação estratégica de demandas relacionadas a operadoras de plano de saúde em Belo Horizonte e cidades da região metropolitana.
+                    </p>
+
+                    <p class="about-description">
+                        A conduta profissional é fundamentada na interpretação da legislação pertinente, nas regulamentações da Agência Nacional de Saúde Suplementar (ANS) e na jurisprudência consolidada, sempre com sensibilidade para as especificidades de cada cliente.
+                    </p>
+                </div>
+                
+                <div class="about-image">
+                    <img src="images/sobre-o-advogado.jpeg" alt="Foto institucional do Dr. Luiz Guilherme Ramos do Couto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Seção FAQ -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Dúvidas Comuns</h2>
+                <p class="section-subtitle">Encontre respostas para perguntas frequentes sobre Direito da Saúde</p>
+            </div>
+            
+            <div class="faq-container">
+                <!-- Item 1 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Como é realizada a primeira consulta?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>A consulta inicial é um momento para você expor sua situação. O advogado ouve, avalia os aspectos legais envolvidos, esclarece seus direitos e discute os caminhos possíveis, podendo ser feita de forma presencial ou online, conforme sua conveniência.</p>
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Qual a forma de cobrança dos honorários?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Os valores dos honorários são estabelecidos em contrato, respeitando a Tabela de Referência da OAB/MG e considerando a complexidade do serviço. Podem ser acordados valores fixos, percentuais sobre o êxito (success fee) ou uma combinação de ambos, sempre com clareza e formalização prévia.</p>
+                    </div>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Quanto tempo costuma durar um processo judicial?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O tempo de tramitação de um processo varia conforme sua complexidade, a fase processual e a agilidade do Poder Judiciário. Em certas situações de urgência, é possível pedir uma decisão liminar para efeitos imediatos. Cada caso possui um ritmo próprio.</p>
+                    </div>
+                </div>
+                
+                <!-- Item 4 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>A operadora pode cancelar meu plano se eu acioná-la na Justiça?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>A lei oferece proteção ao beneficiário contra cancelamentos arbitrários. Uma rescisão como retaliação por buscar seus direitos na Justiça pode, ela mesma, configurar uma nova violação contratual passível de contestação.</p>
+                    </div>
+                </div>
+                
+                <!-- Item 5 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Devo recorrer à ANS ou ao Judiciário?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>São canais com funções distintas. A ANS é o órgão regulador, que fiscaliza as operadoras e pode aplicar penalidades administrativas. A via judicial busca reparar danos individuais e obrigar o cumprimento do contrato. A melhor estratégia é definida após análise do seu caso específico.</p>
+                    </div>
+                </div>
+                
+                <!-- Item 6 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Qual a área de atendimento do escritório?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Atendemos clientes em todo o estado de Minas Gerais, com sede e foco principal em Belo Horizonte e região metropolitana. As consultas podem ser agendadas de forma presencial ou, quando adequado, realizadas por meio de videoconferência.</p>
+                    </div>
+                </div>
+                
+                <!-- Item 7 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>É possível entrar com uma ação judicial enquanto estou em tratamento?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Com certeza. A defesa dos seus direitos pode ser iniciada a qualquer momento, inclusive enquanto o tratamento médico está em andamento. Não existe qualquer restrição legal para isso.</p>
+                    </div>
+                </div>
+                
+                <!-- Item 8 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Quais documentos são necessários para a análise?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Para uma avaliação preliminar eficaz, é útil reunir: contrato ou carteirinha do plano, toda documentação médica (como pedidos, laudos e receitas), as comunicações oficiais de negativa enviadas pela operadora e comprovantes de pagamento das mensalidades. Durante a consulta, orientamos sobre a documentação complementar que pode ser necessária.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Final CTA -->
+    <section class="final-cta-section">
+        <div class="container">
+            <div class="final-cta-content">
+                <h2 class="final-cta-title">
+                    Assegure Seu Acesso à Saúde em Minas Gerais com Assessoria Jurídica Especializada
+                </h2>
+                
+                <div class="final-cta-text">
+                    <p>Se você está enfrentando recusas de cobertura, problemas com reembolsos ou quaisquer outras irregularidades contratuais com seu plano de saúde na região de Belo Horizonte, uma análise jurídica especializada pode elucidar seus direitos e as ações mais adequadas a serem tomadas.</p>
+                    <p>Nosso escritório é dedicado exclusivamente ao Direito da Saúde Suplementar, possuindo expertise técnica aprofundada na legislação do setor e no entendimento dos tribunais de Minas Gerais.</p>
+                </div>
+                
+                <button class="cta-button large-cta" id="final-cta-button"><a href="https://api.whatsapp.com/send/?phone=5531984828479&text=Ol%C3%A1%2C+tenho+uma+d%C3%BAvida&type=phone_number&app_absent=0" target="_blank">SOLICITAR UMA AVALIAÇÃO JURÍDICA</a></button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Mapa -->
+    <section class="map-section" id="map-section">
+        <div style="text-align: center; width: 100%; margin-bottom: 50px;">
+            <h2 class="section-title">Nosso Escritório</h2>
+            <p class="section-subtitle">Localização do nosso escritório em Belo Horizonte</p>
+            <div class="section-divider"></div>
+        </div>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7080.97325021657!2d-43.94752473533267!3d-19.92377846378875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6975e9a272acd%3A0x7f9f4601f19fbd88!2sRua%20dos%20Guajajaras%2C%201470%20-%20Sala%201102%20-%20Barro%20Preto%2C%20Belo%20Horizonte%20-%20MG%2C%2030180-099!5e0!3m2!1spt-BR!2sbr!4v1769685155288!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <!-- Botão Fixo do WhatsApp 
+    <a href="https://api.whatsapp.com/send/?phone=5531984828479&text=Ol%C3%A1%2C+tenho+uma+d%C3%BAvida&type=phone_number&app_absent=0" target="_blank" class="btn-whatsapp">
+        <div class="div_whatsapp">
+            <img src="https://img.icons8.com/?size=512&id=16713&format=png" alt="WhatsApp">
+        </div>
+
+        <style>
+            /* ----- BOTÃO WHATSAPP FIXO ----- */
+            .btn-whatsapp {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background: #25D366;
+                padding:10px;
+                border-radius: 50%;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                z-index: 99;
+                transition: transform 0.3s;
+            }
+
+            .div_whatsapp{
+                height: 50px;
+                width: 50px;
+            }
+
+            .btn-whatsapp:hover {
+                transform: scale(1.1);
+            }
+
+            .btn-whatsapp img {
+                width: 50px;
+                height: 50px;
+            }
+        </style>
+    </a> -->
+
+    <!-- Footer -->
+    <footer class="main-footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo-section">
+                    <!-- LOGO FOOTER: Inserir imagem real aqui -->
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="Logo do Escritório do Dr. Luiz Guilherme Ramos do Couto" width="160" height="55">
+                    </div>
+                    <p class="footer-description">
+                        Escritório de advocacia com atuação focada em Direito da Saúde em Minas Gerais, empenhado na defesa dos direitos dos consumidores de planos de saúde em Belo Horizonte e região metropolitana.
+                    </p>
+                    
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 8V7C16 6.46957 16.2107 5.96086 16.5858 5.58579C16.9609 5.21071 17.4696 5 18 5H19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6 9H2V21H6V9Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-contact-section">
+                    <h3 class="footer-title">Entre em Contato</h3>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 15.5C18.75 15.5 17.55 15.3 16.43 14.93C16.08 14.82 15.69 14.9 15.41 15.17L13.21 17.37C10.38 15.93 8.06 13.62 6.62 10.79L8.82 8.59C9.1 8.31 9.18 7.92 9.07 7.57C8.7 6.45 8.5 5.25 8.5 4C8.5 3.45 8.05 3 7.5 3H4C3.45 3 3 3.45 3 4C3 13.39 10.61 21 20 21C20.55 21 21 20.55 21 20V16.5C21 15.95 20.55 15.5 20 15.5Z" fill="currentColor"/>
+                            </svg>
+                            <span>Telefone: (31) 98482-8479</span>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>E-mail: <s>luizguilherme@adv.oabmg.org.br</s></span>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Endereço: Rua dos Guajajaras, 1470 - Sala 1102, Barro Preto - Belo Horizonte/MG - CEP: 30180-099</span>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 16V12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 8H12.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>OAB: 233.183/MG</span>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-cta">
+                        <button class="cta-button footer-cta-button"><a href="https://api.whatsapp.com/send/?phone=5531984828479&text=Ol%C3%A1%2C+tenho+uma+d%C3%BAvida&type=phone_number&app_absent=0" target="_blank">Agendar uma Consulta</a></button>
+                    </div>
+                </div>
+                
+                <div class="footer-links-section">
+                    <h3 class="footer-title">Acesso Rápido</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#services">Áreas de Atuação</a></li>
+                        <li><a href="#about">Sobre Nós</a></li>
+                        <li><a href="#faq">Perguntas Frequentes</a></li>
+                        <li><a href="https://api.whatsapp.com/send/?phone=5531984828479&text=Ol%C3%A1%2C+tenho+uma+d%C3%BAvida&type=phone_number&app_absent=0">Contato</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">
+                    © 2026 Dr. Luiz Guilherme Ramos do Couto - Advocacia Especializada em Direito da Saúde. Todos os direitos reservados.
+                </p>
+                <p class="disclaimer">
+                    As informações deste site possuem finalidade informativa e não constituem orientação jurídica definitiva, a qual depende de consulta personalizada com um advogado.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
